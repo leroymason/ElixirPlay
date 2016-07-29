@@ -9,7 +9,7 @@ defmodule Experf.Http do
         Logger.info "#{id}: error (#{inspect error.message})"
     end
   end
-
+# comment 
   defp handle_response(%HTTPoison.Response{status_code: 200}, id) do
     Logger.info "#{id}: success"
   end
