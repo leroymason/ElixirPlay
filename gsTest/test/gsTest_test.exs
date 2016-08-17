@@ -5,4 +5,8 @@ defmodule GsTestTest do
   test "the truth" do
     assert 1 + 1 == 2
   end
+
+  test "fails" do
+      assert 1+2 == 2
+  end
 end
