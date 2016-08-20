@@ -17,7 +17,7 @@ defmodule A do
     {:noreply, events, counter + demand}
   end
 end
-
+# comment
 defmodule B do
   use GenStage
 
