@@ -17,3 +17,35 @@ defmodule A do
     {:noreply, events, counter + demand}
   end
 end
+
+defmodule B do
+  use GenStage
+
+  def init(number) do
+    {:producer_consumer, number}
+  end
+
+  def handle_events(events, _from, number) do
+    events = Enum.map(events, & &1 * number)
+    {:noreply, events, number}
+  end
+end
+
+defmodule C do
+  use GenStage
+
+  def init(sleeping_time) do
+    {:consumer, sleeping_time}
+  end
+
+  def handle_events(events, _from, sleeping_time) do
+    # Print events to terminal.
+    IO.inspect(events)
+
+    # Sleep the configured time.
+    Process.sleep(sleeping_time)
+
+    # We are a consumer, so we never emit events.
+    {:noreply, [], sleeping_time}
+  end
+end
