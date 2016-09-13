@@ -7,3 +7,4 @@ File.read!("./words.txt")
     Map.update(acc, word, 1, & &1 + 1)
    end)
 |> Enum.to_list()
+# comment
