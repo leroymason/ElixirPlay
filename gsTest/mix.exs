@@ -18,7 +18,7 @@ defmodule GsTest.Mixfile do
     [applications: [:logger]]
   end
 
-  # Dependencies can be Hex packages:
+  # Dependencies can be Hex packages: x
   #
   #   {:mydep, "~> 0.3.0"}
   #

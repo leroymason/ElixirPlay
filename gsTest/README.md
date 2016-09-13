@@ -2,7 +2,7 @@
 
 **TODO: Add description**
 
-## Installation
+## Installation xxx
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
@@ -21,4 +21,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
       [applications: [:gsTest]]
     end
     ```
-
